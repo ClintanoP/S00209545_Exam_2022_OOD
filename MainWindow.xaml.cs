@@ -17,7 +17,9 @@ namespace S00209545_Exam_2022_OOD
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
-    /// </summary>
+    /// </summary>//
+    /// github link: https://github.com/ClintanoP/S00209545_Exam_2022_OOD
+    /// 
     public partial class MainWindow : Window
     {
         public MainWindow()
