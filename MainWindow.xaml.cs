@@ -40,5 +40,14 @@ namespace S00209545_Exam_2022_OOD
 
 
         }
+
+        private void lbxProperties_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            RentalProperty rp = lbxProperties.SelectedItem as RentalProperty;
+
+            if (rp != null) {
+                tblkDescription.Text = rp.Description;
+            }
+        }
     }
 }

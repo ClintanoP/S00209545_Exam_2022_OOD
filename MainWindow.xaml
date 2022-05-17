@@ -19,9 +19,9 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
-        <ListBox Name="lbxProperties" Grid.Row="1" Grid.Column="0" Margin="20"/>
-        <TextBlock Name="tblkDescription" Grid.Row="1" Grid.Column="1" Margin="20" FontSize="16"/>
-        <Label Content="Property Listing" Grid.Row="0" Grid.Column="0" Margin="20" FontSize="24"/>
+        <ListBox Name="lbxProperties" Grid.Row="1" Grid.Column="0" Margin="20" SelectionChanged="lbxProperties_SelectionChanged"/>
+        <TextBlock Name="tblkDescription" Grid.Row="1" Grid.Column="1" Margin="20" FontSize="12" TextWrapping="Wrap"/>
+        <Label Content="Property Listing" Grid.Row="0" Grid.Column="0" Margin="20" FontSize="20"/>
         <Button Content="Add" Grid.Row="1" Grid.Column="2" Margin="20" VerticalAlignment="Top"/>
     </Grid>
 
