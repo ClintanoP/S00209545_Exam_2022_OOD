@@ -16,7 +16,10 @@ namespace S00209545_Exam_2022_OOD
         public decimal Price { get; set; }
         public string Description { get; set; }
 
-        
+        public void IncreasePrice(decimal percentage)
+        {
+            Price *= percentage;
+        }
     }
 
     
