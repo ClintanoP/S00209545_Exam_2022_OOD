@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:S00209545_Exam_2022_OOD"
         mc:Ignorable="d"
-        Title="addPropertyWindow" Height="450" Width="800">
+        Title="addPropertyWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20*"/>
@@ -30,23 +31,19 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Label Content="Type of Rental" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10" FontSize="15"/>
-            <ComboBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="15" Width="150">
-                <ComboBoxItem>House</ComboBoxItem>
-                <ComboBoxItem>Flat</ComboBoxItem>
-                <ComboBoxItem>Share</ComboBoxItem>
-            </ComboBox>
-            
+            <ComboBox x:Name="cbxTypeOfRental" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" Margin="15" Width="150" SelectionChanged="ComboBox_SelectionChanged"/>
+
             <Label Content="Location" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="15" Margin="10"/>
-            <TextBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="15" Width="150"/>
+            <TextBox Name="tbxLocation"   Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Margin="15" Width="150"/>
 
             <Label Content="Price" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="15" Margin="10"/>
-            <TextBox Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="15" Width="150"/>
+            <TextBox Name="tbxPrice"   Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" Margin="15" Width="150"/>
             
-            <Label Content="Description" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top"  HorizontalAlignment="Left" FontSize="15"/>
+            <Label Content="Description" Grid.Row="3" Grid.Column="0" VerticalAlignment="Top"  HorizontalAlignment="Left" FontSize="15" Margin="10,0,0,0"/>
             <TextBlock x:Name="tblkDescription" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,30,10,10"/>
         </Grid>
 
 
-        <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="2" Margin="13" Width="100"/>
+        <Button x:Name="btnSave" Content="Save" Grid.Column="2" Grid.Row="2" Margin="13" Width="100" Click="btnSave_Click"/>
     </Grid>
 </Window>

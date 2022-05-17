@@ -21,5 +21,35 @@ namespace S00209545_Exam_2022_OOD
         {
             InitializeComponent();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            RentalPropertyData db = new RentalPropertyData();
+            RentalProperty newProp = new RentalProperty();
+
+            if (cbxTypeOfRental.SelectedItem != null && tbxLocation.Text != null && tbxPrice != null) {
+                newProp.TypeOfRental = ((RentalType)cbxTypeOfRental.SelectedItem);
+                newProp.Location = tbxLocation.Text;
+                newProp.Price = int.Parse(tbxPrice.Text);
+
+                db.Rentals.Add(newProp);
+                db.SaveChanges();
+
+            }
+            
+            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            cbxTypeOfRental.Items.Add(RentalType.House);
+            cbxTypeOfRental.Items.Add(RentalType.Flat);
+            cbxTypeOfRental.Items.Add(RentalType.Share);
+        }
     }
 }
