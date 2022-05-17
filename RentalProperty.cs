@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Text;
 
 namespace S00209545_Exam_2022_OOD
 {
-    public enum Rentals
+    public enum RentalType
     { 
-        Rental, Flat, Share
+        House, Flat, Share
     }
     public class RentalProperty
     {
         public int ID { get; set; }
-        public Rentals RentalType { get; set; }
+        public RentalType TypeOfRental { get; set; }
         public string Location { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
@@ -20,7 +21,14 @@ namespace S00209545_Exam_2022_OOD
         {
             Price *= percentage;
         }
+    }//end of RentalProperty class
+
+    public class RentalPropertyData : DbContext {
+        public RentalPropertyData() : base("MyRentalPropertyData") { }
+
+        public DbSet<RentalProperty> Rentals { get; set; }
     }
+
 
     
 }

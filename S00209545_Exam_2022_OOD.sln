@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S00209545_Exam_2022_OOD", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "..\Tests\Tests.csproj", "{DA0A2661-BF89-4EED-8BCB-611B03F315B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManagment", "..\DataManagment\DataManagment.csproj", "{3D5FBE22-D30D-44E7-A7E7-8D2A39536B4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DA0A2661-BF89-4EED-8BCB-611B03F315B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA0A2661-BF89-4EED-8BCB-611B03F315B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA0A2661-BF89-4EED-8BCB-611B03F315B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D5FBE22-D30D-44E7-A7E7-8D2A39536B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5FBE22-D30D-44E7-A7E7-8D2A39536B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5FBE22-D30D-44E7-A7E7-8D2A39536B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5FBE22-D30D-44E7-A7E7-8D2A39536B4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
