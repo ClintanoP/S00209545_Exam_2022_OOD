@@ -49,5 +49,11 @@ namespace S00209545_Exam_2022_OOD
                 tblkDescription.Text = rp.Description;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            addPropertyWindow a = new addPropertyWindow();
+            a.Show();
+        }
     }
 }

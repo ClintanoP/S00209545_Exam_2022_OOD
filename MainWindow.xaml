@@ -35,7 +35,7 @@
             Name="lbxProperties" Grid.Row="1" Grid.Column="0" Margin="20" SelectionChanged="lbxProperties_SelectionChanged"/>
         <TextBlock Name="tblkDescription" Grid.Row="1" Grid.Column="1" Margin="20" FontSize="12" TextWrapping="Wrap"/>
         <Label Content="Property Listing" Grid.Row="0" Grid.Column="0" Margin="20" FontSize="20"/>
-        <Button Content="Add" Grid.Row="1" Grid.Column="2" Margin="20" VerticalAlignment="Top"/>
+        <Button Content="Add" Grid.Row="1" Grid.Column="2" Margin="20" VerticalAlignment="Top" Click="Button_Click"/>
     </Grid>
 
     
