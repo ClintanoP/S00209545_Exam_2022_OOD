@@ -26,5 +26,19 @@ namespace S00209545_Exam_2022_OOD
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            RentalPropertyData db = new RentalPropertyData();
+
+            var query = from p in db.Rentals
+                        orderby p.Price
+                        select p;
+
+            var allProps = query.ToList();
+            lbxProperties.ItemsSource = allProps;
+
+
+        }
     }
 }

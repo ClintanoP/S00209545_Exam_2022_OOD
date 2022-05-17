@@ -21,6 +21,10 @@ namespace S00209545_Exam_2022_OOD
         {
             Price *= percentage;
         }
+        public override string ToString()
+        {
+            return $"{Location}  {Price:C}";
+        }
     }//end of RentalProperty class
 
     public class RentalPropertyData : DbContext {
