@@ -6,7 +6,23 @@
         xmlns:local="clr-namespace:S00209545_Exam_2022_OOD"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="70*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
 
+        <ListBox Name="lbxProperties" Grid.Row="1" Grid.Column="0" Margin="20"/>
+        <TextBlock Name="tblkDescription" Grid.Row="1" Grid.Column="1" Margin="20" FontSize="16"/>
+        <Label Content="Property Listing" Grid.Row="0" Grid.Column="0" Margin="20" FontSize="24"/>
+        <Button Content="Add" Grid.Row="1" Grid.Column="2" Margin="20" VerticalAlignment="Top"/>
     </Grid>
+
+    
 </Window>
