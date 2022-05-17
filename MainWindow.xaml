@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="lbxDataTemplate">
+            <StackPanel Orientation="Horizontal" Margin="5">
+                <Image Source="{Binding RentalIcon}" Width="30" Margin="5"/>
+                <TextBlock Text="{Binding Location}" VerticalAlignment="Center"/>
+                <TextBlock Text="  €" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding Price}" VerticalAlignment="Center"/>
+            </StackPanel>
+        </DataTemplate>
+        
+    </Window.Resources>
+    
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
@@ -19,7 +31,8 @@
             <RowDefinition Height="10*"/>
         </Grid.RowDefinitions>
 
-        <ListBox Name="lbxProperties" Grid.Row="1" Grid.Column="0" Margin="20" SelectionChanged="lbxProperties_SelectionChanged"/>
+        <ListBox ItemTemplate="{StaticResource lbxDataTemplate}"
+            Name="lbxProperties" Grid.Row="1" Grid.Column="0" Margin="20" SelectionChanged="lbxProperties_SelectionChanged"/>
         <TextBlock Name="tblkDescription" Grid.Row="1" Grid.Column="1" Margin="20" FontSize="12" TextWrapping="Wrap"/>
         <Label Content="Property Listing" Grid.Row="0" Grid.Column="0" Margin="20" FontSize="20"/>
         <Button Content="Add" Grid.Row="1" Grid.Column="2" Margin="20" VerticalAlignment="Top"/>

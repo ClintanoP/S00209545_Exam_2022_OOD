@@ -16,6 +16,7 @@ namespace S00209545_Exam_2022_OOD
         public string Location { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
+        public string RentalIcon { get; set; }
 
         public void IncreasePrice(decimal percentage)
         {
